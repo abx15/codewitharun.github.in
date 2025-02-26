@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f8f1e9; /* Light creamy beige background */
+    color: #3a3a3a; /* Darker gray for text */
+    line-height: 1.6;
+    position: relative;
+}
+
+/* Subtle Background Pattern */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/subtle-white-feathers.png') repeat;
+    opacity: 0.1; /* Light texture overlay */
+    z-index: -1;
+}
+
+/* Header / Home Section */
+header {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Slightly lighter overlay */
+}
+
+/* Fixed Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #8a9a5b; /* Sage green */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #3a3a3a;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #dcae96; /* Dusty rose */
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #d4a017; /* Muted gold */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.cta:hover {
+    background: #b38b14; /* Darker muted gold */
+}
+
+/* About Section */
+#about {
+    padding: 80px 50px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#about h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #8a9a5b; /* Sage green */
+}
+
+.about-content p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #666;
+}
+
+/* Services Section */
+#services {
+    padding: 80px 50px;
+    background-color: #f8f1e9;
+    text-align: center;
+}
+
+#services h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #8a9a5b;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.service-item {
+    background: #fff;
+    padding: 30px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(138, 154, 91, 0.2); /* Sage green shadow */
+}
+
+.service-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #3a3a3a;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Team Members Section */
+#team {
+    padding: 80px 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#team h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #8a9a5b;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.team-member {
+    background: #fff;
+    padding: 30px;
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(138, 154, 91, 0.2);
+}
+
+.team-member.leader {
+    border: 2px solid #d4a017; /* Muted gold for leader */
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #3a3a3a;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 50px;
+    background-color: #f8f1e9;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #8a9a5b;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #dcae96; /* Dusty rose border */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #3a3a3a;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #8a9a5b; /* Sage green on focus */
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    padding: 12px;
+    background: #d4a017; /* Muted gold */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #b38b14;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    color: #666;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #8a9a5b; /* Sage green */
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top:hover {
+    background: #6f7e47; /* Darker sage green */
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    #about, #services, #team, #contact {
+        padding: 50px 20px;
+    }
+
+    .services-container, .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

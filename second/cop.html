@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Dashboard</title>
+    <link rel="stylesheet" href="cop.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <h2>Dashboard</h2>
+        <nav>
+            <a href="#overview" class="active">Overview</a>
+            <a href="#revenue">Revenue</a>
+            <a href="#performance">Performance</a>
+            <a href="#projects">Projects</a>
+            <a href="#settings">Settings</a>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header>
+            <h1>Corporate Dashboard</h1>
+            <div class="user-info">
+                <span>Welcome, Admin</span>
+                <button>Logout</button>
+            </div>
+        </header>
+
+        <!-- Dashboard Widgets -->
+        <section class="dashboard">
+            <!-- Quick Stats -->
+            <div class="widget stats">
+                <h3>Quick Stats</h3>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <p>Revenue</p>
+                        <h4>$1.2M</h4>
+                    </div>
+                    <div class="stat">
+                        <p>Active Projects</p>
+                        <h4>14</h4>
+                    </div>
+                    <div class="stat">
+                        <p>Employees</p>
+                        <h4>87</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Trend -->
+            <div class="widget revenue">
+                <h3>Revenue Trend</h3>
+                <div class="chart-placeholder">Revenue Chart Placeholder</div>
+            </div>
+
+            <!-- Employee Performance -->
+            <div class="widget performance">
+                <h3>Employee Performance</h3>
+                <div class="chart-placeholder">Performance Chart Placeholder</div>
+            </div>
+
+            <!-- Project Status -->
+            <div class="widget projects">
+                <h3>Project Status</h3>
+                <ul>
+                    <li>Project A - On Track</li>
+                    <li>Project B - Delayed</li>
+                    <li>Project C - Completed</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
